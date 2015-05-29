@@ -43,7 +43,6 @@ describe('the server', function () {
                 payload: JSON.stringify({
                     amount: testServer.app.AMOUNT,
                     description: testServer.app.DESCRIPTION,
-                    metadata: JSON.stringify(testServer.app.METADATA),
                     stripeToken: 'AN_INVALID_TOKEN',
                     stripeTokenType: 'card',
                     stripeEmail: config.testEmail,
@@ -65,7 +64,6 @@ describe('the server', function () {
                 payload: JSON.stringify({
                     amount: testServer.app.AMOUNT,
                     description: testServer.app.DESCRIPTION,
-                    metadata: JSON.stringify(testServer.app.METADATA),
                     stripeToken: token.id,
                     stripeTokenType: 'card',
                     stripeEmail: config.testEmail,
