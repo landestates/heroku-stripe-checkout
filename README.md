@@ -24,7 +24,6 @@ Using Stripe's [integration](https://stripe.com/docs/checkout#integration-simple
     ></script>
     <input name="amount" value="YOUR_AMOUNT" type="hidden">
     <input name="description" value="YOUR_DESCRIPTION" type="hidden">
-    <input name="metadata" value="YOUR_METADATA" type="hidden">
 </form>
 ```
 
