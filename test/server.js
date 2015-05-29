@@ -13,10 +13,7 @@ var CARD_EXP_YEAR = new Date().getFullYear() + 1
 var CARD_NUMBER = '4242424242424242'
 var DESCRIPTION = 'An automated test transaction.'
 
-var METADATA = {
-    a_string: 'a',
-    a_number: 1,
-}
+
 var PORT = 3001
 var TEMPLATE = fs.readFileSync(path.resolve(__dirname, './index.hbs'), 'utf8')
 var URL = [
@@ -37,7 +34,6 @@ _.extend(server.app, {
     CARD_EXP_YEAR: CARD_EXP_YEAR,
     CARD_NUMBER: CARD_NUMBER,
     DESCRIPTION: DESCRIPTION,
-    METADATA: METADATA,
     URL: URL,
 })
 
@@ -53,7 +49,6 @@ server.route({
             return reply(template({
                 amount: AMOUNT,
                 description: DESCRIPTION,
-                metadata: JSON.stringify(METADATA),
                 stripe_publishable_key: config.stripePublishableKey,
                 url: URL,
             }))
