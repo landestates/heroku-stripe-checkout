@@ -39,10 +39,6 @@ Use `input` fields to send information about the charge to the server.
 
     A description of the transaction. If present, the server will include it when creating the charge.
 
-- **`metadata`** `String`
-
-    A JavaScript Object, stringified and HTML encoded. This field allows you to dynamically add information about the charge from the frontend, e.g. `{ product_id: '12345' }`. If present, the server will decode and include it when creating the charge.
-
 ## Contributing
 
 See [CONTRIBUTING](https://github.com/christophercliff/heroku-stripe-checkout/blob/master/CONTRIBUTING.md).
